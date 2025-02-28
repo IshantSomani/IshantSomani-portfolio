@@ -72,8 +72,6 @@ const Home = () => {
                 </div>
             </section>
 
-
-
             <Suspense fallback={loader}>
                 <SocialMediaSection />
             </Suspense>

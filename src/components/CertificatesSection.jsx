@@ -1,8 +1,10 @@
-import { FiExternalLink } from "react-icons/fi";
 import nptel from '../assets/nptel.png'
 import redhat from '../assets/redhat.png'
 import grras from '../assets/grras.png'
 import { memo, useMemo } from "react";
+import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
+import { FiExternalLink } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
 
 const certificates = [
     {
@@ -112,6 +114,48 @@ const Certificates = memo(function Certificates() {
                     </div>
                 </div>
             </section>
+
+            <footer
+                className='mb-10'
+                aria-label="Direct Contact Options"
+            >
+                <div className='staggered-fade-in max-w-4xl mx-auto'>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
+                        Direct Contact Options
+                    </h3>
+
+                    <div className='staggered-fade-in flex justify-center flex-wrap items-center gap-6 sm:gap-8 bg-white border-l-4 border-black p-4 rounded-lg shadow'>
+                        <a
+                            href="mailto:ishantsomani2003@gmail.com"
+                            className="flex items-center text-blue-600 hover:text-blue-800 transition-all group font-medium"
+                            aria-label="Send email"
+                        >
+                            <HiOutlineMail className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
+                            <span className="hover:font-semibold">ishantsomani2003@gmail.com</span>
+                        </a>
+
+                        <a
+                            href="tel:+919928271130"
+                            className="flex items-center text-green-600 hover:text-green-800 transition-all group font-medium"
+                            aria-label="Call phone number"
+                        >
+                            <HiOutlinePhone className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
+                            <span className="hover:font-semibold">+91 99282 71130</span>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/https://www.linkedin.com/in/ishant-somani-973492217/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
+                            aria-label="Visit LinkedIn profile"
+                        >
+                            <FaLinkedin className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
+                            <span className="hover:font-semibold">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </>
     )
 });
