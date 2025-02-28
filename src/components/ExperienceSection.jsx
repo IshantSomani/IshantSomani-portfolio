@@ -10,7 +10,7 @@ const ExperienceSection = () => {
     const works = useMemo(() => [
         {
             companyName: 'GRRAS Solution Pvt. Ltd',
-            url: 'https://grras.com',
+            url: 'https://in.linkedin.com/company/grras-solutions-p-ltd',
             logo: grras,
             title: "Trainee",
             description: 'During my training at Grras Solutions Pvt. Ltd., I enhanced MERN Stack development expertise, through hands-on training in MongoDB, Express.js, React.js, and Node.js to build both front-end and back-end web applications. I gained hands-on experience in developing responsive UIs, integrating RESTful APIs, and managing databases. This opportunity strengthened my problem-solving skills and deepened my passion for full-stack development.',
