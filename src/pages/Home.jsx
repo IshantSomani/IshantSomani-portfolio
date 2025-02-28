@@ -31,13 +31,13 @@ const Home = () => {
                                     <span className="text-indigo-600 relative">Full Stack Developer</span>
                                 </h2>
 
-                                <p className="text-lg md:text-xl text-gray-600 leading-relaxed  max-w-2xl mx-auto md:mx-0">
+                                <p className="text-lg md:text-xl text-gray-600 leading-relaxed  max-w-2xl mx-auto md:mx-0 tracking-wide">
                                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-medium">
                                         Crafting seamless digital experiences
                                     </span>{" "}
                                     with modern web technologies. Let&apos;s collaborate to transform your ideas into{" "}
                                     <span className="relative inline-block">
-                                        <span className="underline decoration-blue-200 decoration-wavy">scalable solutions</span>
+                                        <span className="underline decoration-indigo-400 decoration-wavy">scalable solutions</span>
                                     </span>.
                                 </p>
                             </div>
@@ -66,8 +66,8 @@ const Home = () => {
                 </div>
 
                 <div className="staggered-fade-in">
-                    <div className="prose prose-lg text-gray-600 space-y-6">
-                        Namaste! I&apos;m a final-year BCA student from Sangam University and a Full stack developer passionate about blending code with creativity. I&apos;m specialize in user-friendly web applications with AI tools to simplify development, reduce time, and enhance UI/UX. Beyond coding, I thrive on leadership—organizing 5+ university events and coordinating my team to secure a top-10 position in two hackathons. Learning new things is just a way of life for me, and I am addicted to trends around AI, tech tutorials, and collaborative projects. Let&apos;s connect over chai pe charcha for a lively discussion! 🚀
+                    <div className="prose prose-lg text-gray-600 space-y-6 tracking-wide">
+                        <strong className='text-lg'>Namaste!</strong> I&apos;m a <strong>final-year BCA student</strong> from <strong>Sangam University</strong> and a <strong>Full stack developer</strong> passionate about blending code with creativity. I specialize in <strong>user-friendly web applications</strong> with <strong>AI tools</strong> to <strong>simplify development</strong>, <strong>reduce time</strong>, and <strong>enhance UI/UX</strong>. Beyond coding, I thrive on <strong>leadership</strong> - organizing <strong>5+ university events</strong> and <strong>coordinating my team</strong> to secure a <strong>top-10 position in two hackathons</strong>. <strong>Learning new things</strong> is just a way of life for me, and I&apos;m addicted to trends around AI, tech tutorials, and collaborative projects. Let&apos;s connect over <strong>chai pe charcha</strong> for a lively discussion! 🚀
                     </div>
                 </div>
             </section>

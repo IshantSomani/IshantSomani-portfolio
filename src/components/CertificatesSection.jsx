@@ -77,7 +77,7 @@ const Certificates = memo(function Certificates() {
                                             />
                                         </div>
 
-                                        <div className="flex-1 space-y-2">
+                                        <div className="flex-1 space-y-2 tracking-wide">
                                             <h3 className="text-lg font-semibold text-gray-900 leading-tight">
                                                 {cert.name}
                                             </h3>
@@ -92,7 +92,7 @@ const Certificates = memo(function Certificates() {
                                         </div>
                                     </div>
 
-                                    <div className="mt-4 pt-4 border-t border-gray-100">
+                                    <div className="mt-4 pt-4 border-t border-gray-100 tracking-wide">
                                         <a
                                             href={cert.url}
                                             target="_blank"
@@ -127,7 +127,7 @@ const Certificates = memo(function Certificates() {
                     <div className='staggered-fade-in flex justify-center flex-wrap items-center gap-6 sm:gap-8 bg-white border-l-4 border-black p-4 rounded-lg shadow'>
                         <a
                             href="mailto:ishantsomani2003@gmail.com"
-                            className="flex items-center text-blue-600 hover:text-blue-800 transition-all group font-medium"
+                            className="flex tracking-wide items-center text-blue-600 hover:text-blue-800 transition-all group font-medium"
                             aria-label="Send email"
                         >
                             <HiOutlineMail className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
@@ -136,7 +136,7 @@ const Certificates = memo(function Certificates() {
 
                         <a
                             href="tel:+919928271130"
-                            className="flex items-center text-green-600 hover:text-green-800 transition-all group font-medium"
+                            className="flex tracking-wide items-center text-green-600 hover:text-green-800 transition-all group font-medium"
                             aria-label="Call phone number"
                         >
                             <HiOutlinePhone className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
@@ -147,7 +147,7 @@ const Certificates = memo(function Certificates() {
                             href="https://www.linkedin.com/in/https://www.linkedin.com/in/ishant-somani-973492217/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
+                            className="flex tracking-wide items-center text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
                             aria-label="Visit LinkedIn profile"
                         >
                             <FaLinkedin className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />

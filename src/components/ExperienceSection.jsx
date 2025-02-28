@@ -68,7 +68,7 @@ const ExperienceSection = () => {
                                                         href={work.url}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="hover:text-gray-950 transition-colors"
+                                                        className="hover:text-gray-950 transition-colors tracking-wide"
                                                         aria-label={`${work.companyName} link`}
                                                     >
                                                         {work.companyName}
@@ -85,15 +85,15 @@ const ExperienceSection = () => {
                                                         }
                                                     </button>
                                                 </h3>
-                                                <p className="text-sm text-gray-500 font-medium">{work.title}</p>
+                                                <p className="text-sm text-gray-500 font-medium tracking-wide">{work.title}</p>
                                             </div>
-                                            <span className="text-sm text-gray-600 font-medium bg-gray-100 px-3 py-1 rounded-md">
+                                            <span className="text-sm text-gray-600 tracking-wide font-medium bg-gray-100 px-3 py-1 rounded-md">
                                                 {work.startDate} &ndash; {work.endDate}
                                             </span>
                                         </div>
 
                                         <div
-                                            className={`overflow-hidden transition-all pb-3 duration-300 ease-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
+                                            className={`overflow-hidden transition-all pb-3 tracking-wide duration-300 ease-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                                             aria-hidden={openIndex !== index}
                                         >
                                             <p className="text-gray-600 leading-relaxed mb-6">

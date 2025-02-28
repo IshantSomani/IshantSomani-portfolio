@@ -170,14 +170,14 @@ const Projects = () => {
                                     <header className="mb-1">
                                         <h3
                                             id={`project-${project.title.replace(/\s+/g, '-').toLowerCase()}-title`}
-                                            className="text-xl font-bold text-gray-900 mb-2 flex items-center"
+                                            className="text-xl tracking-wide font-bold text-gray-900 mb-2 flex items-center"
                                         >
                                             {project.title}
                                             <span className="ml-2 inline-block h-2 w-2 bg-green-400 rounded-full group-hover:animate-pulse" aria-hidden="true" />
                                         </h3>
                                     </header>
 
-                                    <div className="project-description mb-4">
+                                    <div className="project-description mb-4 tracking-wide">
                                         <h4 className="font-semibold mb-2">{project.description.overview}</h4>
                                         <ul className="list-disc pl-5">
                                             {project.description.features.map((feature, index) => (
@@ -189,7 +189,7 @@ const Projects = () => {
                                         {project.skills.map(skill => (
                                             <span
                                                 key={skill}
-                                                className="px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded"
+                                                className="px-2.5 py-1 tracking-wide bg-neutral-900 text-white text-xs font-medium rounded"
                                                 aria-label={`Technology used: ${skill}`}
                                             >
                                                 {skill}
@@ -206,7 +206,7 @@ const Projects = () => {
                                                         href={project.github}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="inline-flex items-center px-4 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-200 border border-gray-200 hover:border-gray-300"
+                                                        className="inline-flex tracking-wide items-center px-4 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-200 border border-gray-200 hover:border-gray-300"
                                                         aria-label="View source code on GitHub"
                                                     >
                                                         <SiGithub className="w-6 h-6 mr-2" />
@@ -219,7 +219,7 @@ const Projects = () => {
                                                         href={project.demo}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="inline-flex items-center px-4 py-2 bg-neutral-800 hover:bg-neutral-900 text-white rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+                                                        className="inline-flex tracking-wide items-center px-4 py-2 bg-neutral-800 hover:bg-neutral-900 text-white rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
                                                         aria-label="View live demo"
                                                     >
                                                         <BiLink className="w-6 h-6 mr-2" />
@@ -232,7 +232,7 @@ const Projects = () => {
                                                 <a
                                                     href={project.apk}
                                                     download
-                                                    className="inline-flex items-center px-3 py-2 text-neutral-500 hover:text-neutral-600 transition-colors group"
+                                                    className="inline-flex tracking-wide items-center px-3 py-2 text-neutral-500 hover:text-neutral-600 transition-colors group"
                                                     aria-label="Download Android application package"
                                                 >
                                                     <BiDownload className="w-6 h-6 mr-2 group-hover:animate-bounce" />
@@ -250,7 +250,7 @@ const Projects = () => {
             <div className="mt-10 text-center">
               <button
                 onClick={toggleProjects}
-                className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-gray-800 hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center tracking-wide px-5 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-gray-800 hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
                 aria-expanded={!showMoreButton}
                 aria-controls="projects-container"
               >
