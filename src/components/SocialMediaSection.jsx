@@ -46,11 +46,9 @@ const SocialMediaSection = () => {
 
     return (
         <>
-            <section id="socials" className="mb-10" aria-label="Social Media Section">
+            <section id="socials" className="mb-container" aria-label="Social Media Section">
                 <div className="staggered-fade-in">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
-                        Let&apos;s Connect
-                    </h2>
+                    <h2>Let&apos;s Connect</h2>
                 </div>
 
                 <div className="staggered-fade-in">
@@ -65,7 +63,7 @@ const SocialMediaSection = () => {
                                 className="group relative bg-neutral-950 text-white rounded-lg p-3 hover:bg-neutral-900 shadow-md hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 flex flex-col items-center justify-center gap-2"
                                 aria-label={`Connect via ${link.name}`}
                             >
-                                <div className="text-xl sm:text-2xl text-gray-400 group-hover:text-gray-300 transition-colors">
+                                <div className="text-xl sm:text-2xl text-gray-100 group-hover:text-gray-200 transition-colors">
                                     {link.icon}
                                 </div>
                                 <span className="absolute top-full mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out bg-neutral-800 px-2 py-1 rounded text-sm whitespace-nowrap">

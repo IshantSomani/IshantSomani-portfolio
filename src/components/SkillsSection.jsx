@@ -35,13 +35,11 @@ const SkillsSection = () => {
         <>
             <section
                 id="skills"
-                className="mb-10"
+                className="mb-container"
                 aria-label="Technical Skills"
             >
                 <div className="staggered-fade-in">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
-                        Technical Expertise
-                    </h2>
+                    <h2>Technical Expertise</h2>
                 </div>
 
                 <div className="staggered-fade-in">
@@ -53,10 +51,10 @@ const SkillsSection = () => {
                                 aria-label={`${skill.name} skill`}
                             >
                                 <div className="flex items-center gap-2 p-3 px-3.5">
-                                    <div className={`text-2xl ${skill.color || 'text-gray-400'} transition-colors group-hover:text-opacity-80`}>
+                                    <div className={`text-2xl ${skill.color || 'text-gray-100'} transition-colors group-hover:text-opacity-80`}>
                                         {skill.icon}
                                     </div>
-                                    <span className="text-sm font-medium text-gray-300 text-center">
+                                    <span className="text-sm font-medium text-gray-100 text-center">
                                         {skill.name}
                                     </span>
                                 </div>

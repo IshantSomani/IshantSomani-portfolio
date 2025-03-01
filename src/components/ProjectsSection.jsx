@@ -123,7 +123,7 @@ const Projects = () => {
     const showMoreButton = projects.length > visibleProjects;
 
     const toggleProjects = () => {
-        setVisibleProjects(prev => showMoreButton ? prev + 2 : 2); 
+        setVisibleProjects(prev => showMoreButton ? prev + 2 : 2);
     };
 
 
@@ -136,11 +136,9 @@ const Projects = () => {
 
     return (
         <>
-            <section id="projects" className="mb-10" aria-label="Projects section">
+            <section id="projects" className="mb-container" aria-label="Projects section">
                 <div className="staggered-fade-in">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
-                        Featured Projects
-                    </h2>
+                    <h2>Featured Projects</h2>
                 </div>
 
 
@@ -150,7 +148,7 @@ const Projects = () => {
 
                             <div
                                 key={project.title}
-                                className="group relative bg-white overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col h-full rounded-lg border-b-4 border-black/80"
+                                className="group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col h-full bottom-border"
                             >
                                 <figure className="relative bg-gradient-to-r from-blue-50 to-purple-50 overflow-hidden h-fit">
                                     <div className="relative w-full overflow-hidden pt-[56.25%]">
@@ -170,7 +168,7 @@ const Projects = () => {
                                     <header className="mb-1">
                                         <h3
                                             id={`project-${project.title.replace(/\s+/g, '-').toLowerCase()}-title`}
-                                            className="text-xl tracking-wide font-bold text-gray-900 mb-2 flex items-center"
+                                            className="text-xl font-bold text-gray-900 mb-2 flex items-center tracking-wide"
                                         >
                                             {project.title}
                                             <span className="ml-2 inline-block h-2 w-2 bg-green-400 rounded-full group-hover:animate-pulse" aria-hidden="true" />
@@ -189,7 +187,7 @@ const Projects = () => {
                                         {project.skills.map(skill => (
                                             <span
                                                 key={skill}
-                                                className="px-2.5 py-1 tracking-wide bg-neutral-900 text-white text-xs font-medium rounded"
+                                                className="px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded tracking-wide"
                                                 aria-label={`Technology used: ${skill}`}
                                             >
                                                 {skill}
@@ -247,27 +245,27 @@ const Projects = () => {
                     </div>
 
                     {projects.length > 2 && (
-            <div className="mt-10 text-center">
-              <button
-                onClick={toggleProjects}
-                className="inline-flex items-center tracking-wide px-5 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-gray-800 hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
-                aria-expanded={!showMoreButton}
-                aria-controls="projects-container"
-              >
-                {showMoreButton ? (
-                  <>
-                    <FaAngleDown className="w-5 h-5 mr-2" />
-                    Show More Projects
-                  </>
-                ) : (
-                  <>
-                    <FaAngleUp className="w-5 h-5 mr-2" />
-                    Show Fewer Projects
-                  </>
-                )}
-              </button>
-            </div>
-          )}
+                        <div className="mt-10 text-center">
+                            <button
+                                onClick={toggleProjects}
+                                className="inline-flex items-center tracking-wide px-5 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-gray-800 hover:bg-gray-900 transition-all duration-300 transform hover:scale-105"
+                                aria-expanded={!showMoreButton}
+                                aria-controls="projects-container"
+                            >
+                                {showMoreButton ? (
+                                    <>
+                                        <FaAngleDown className="w-5 h-5 mr-2" />
+                                        Show More Projects
+                                    </>
+                                ) : (
+                                    <>
+                                        <FaAngleUp className="w-5 h-5 mr-2" />
+                                        Show Fewer Projects
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    )}
                 </div>
             </section>
 

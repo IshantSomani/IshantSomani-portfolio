@@ -50,13 +50,11 @@ const Certificates = memo(function Certificates() {
     return (
         <>
             <section id="certificates"
-                className="mb-10"
+                className="mb-container"
                 aria-label="Certifications"
             >
                 <div className="staggered-fade-in">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
-                        Certifications
-                    </h2>
+                    <h2>Certifications</h2>
                 </div>
 
                 <div className="staggered-fade-in overflow-hidden pb-4">
@@ -65,10 +63,10 @@ const Certificates = memo(function Certificates() {
                             {duplicatedCertificates.map((cert, index) => (
                                 <div
                                     key={index}
-                                    className="group relative bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ease-out min-w-[400px] rounded-lg border-b-4 border-black/80"
+                                    className="group relative p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ease-out min-w-[400px] bottom-border"
                                 >
                                     <div className="flex gap-4">
-                                        <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-black overflow-hidden border  border-gray-200">
+                                        <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-black overflow-hidden border border-gray-200">
                                             <img
                                                 className={`${cert.issuer.includes('NPTEL') ? 'p-1.5 bg-white' : 'p-2'} w-full h-full object-contain`}
                                                 loading="lazy"
@@ -77,7 +75,7 @@ const Certificates = memo(function Certificates() {
                                             />
                                         </div>
 
-                                        <div className="flex-1 space-y-2 tracking-wide">
+                                        <div className="flex-1 tracking-wide space-y-2">
                                             <h3 className="text-lg font-semibold text-gray-900 leading-tight">
                                                 {cert.name}
                                             </h3>
@@ -92,7 +90,7 @@ const Certificates = memo(function Certificates() {
                                         </div>
                                     </div>
 
-                                    <div className="mt-4 pt-4 border-t border-gray-100 tracking-wide">
+                                    <div className="mt-4 pt-4 border-t border-gray-100">
                                         <a
                                             href={cert.url}
                                             target="_blank"
@@ -116,18 +114,16 @@ const Certificates = memo(function Certificates() {
             </section>
 
             <footer
-                className='mb-10'
+                className='mb-container'
                 aria-label="Direct Contact Options"
             >
                 <div className='staggered-fade-in max-w-4xl mx-auto'>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
-                        Direct Contact Options
-                    </h3>
+                    <h2>Direct Contact Options</h2>
 
                     <div className='staggered-fade-in flex justify-center flex-wrap items-center gap-6 sm:gap-8 bg-white border-l-4 border-black p-4 rounded-lg shadow'>
                         <a
                             href="mailto:ishantsomani2003@gmail.com"
-                            className="flex tracking-wide items-center text-blue-600 hover:text-blue-800 transition-all group font-medium"
+                            className="flex items-center tracking-wide text-blue-600 hover:text-blue-800 transition-all group font-medium"
                             aria-label="Send email"
                         >
                             <HiOutlineMail className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
@@ -136,7 +132,7 @@ const Certificates = memo(function Certificates() {
 
                         <a
                             href="tel:+919928271130"
-                            className="flex tracking-wide items-center text-green-600 hover:text-green-800 transition-all group font-medium"
+                            className="flex items-center tracking-wide text-green-600 hover:text-green-800 transition-all group font-medium"
                             aria-label="Call phone number"
                         >
                             <HiOutlinePhone className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
@@ -147,7 +143,7 @@ const Certificates = memo(function Certificates() {
                             href="https://www.linkedin.com/in/https://www.linkedin.com/in/ishant-somani-973492217/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex tracking-wide items-center text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
+                            className="flex items-center tracking-wide text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
                             aria-label="Visit LinkedIn profile"
                         >
                             <FaLinkedin className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />

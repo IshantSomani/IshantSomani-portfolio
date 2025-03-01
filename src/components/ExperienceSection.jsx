@@ -33,11 +33,9 @@ const ExperienceSection = () => {
 
     return (
         <>
-            <section id="experience" className="mb-10" aria-label="Experience Section">
+            <section id="experience" className="mb-container" aria-label="Experience Section">
                 <div className="staggered-fade-in">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-12 after:h-1 after:bg-blue-900">
-                        Professional Journey
-                    </h2>
+                    <h2>Professional Journey</h2>
                 </div>
 
                 <div className="staggered-fade-in">
@@ -63,12 +61,12 @@ const ExperienceSection = () => {
                                     <div className="flex-1 space-y-3">
                                         <div className="flex justify-between items-start flex-wrap gap-4">
                                             <div>
-                                                <h3 className="text-lg sm:text-xl font-bold text-black/85 flex items-center gap-2">
+                                                <h3 className="text-lg tracking-wide sm:text-xl font-bold text-black/85 flex items-center gap-2">
                                                     <a
                                                         href={work.url}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="hover:text-gray-950 transition-colors tracking-wide"
+                                                        className="hover:text-gray-950 transition-colors"
                                                         aria-label={`${work.companyName} link`}
                                                     >
                                                         {work.companyName}
@@ -85,7 +83,7 @@ const ExperienceSection = () => {
                                                         }
                                                     </button>
                                                 </h3>
-                                                <p className="text-sm text-gray-500 font-medium tracking-wide">{work.title}</p>
+                                                <p className="text-sm text-gray-500 tracking-wide font-medium">{work.title}</p>
                                             </div>
                                             <span className="text-sm text-gray-600 tracking-wide font-medium bg-gray-100 px-3 py-1 rounded-md">
                                                 {work.startDate} &ndash; {work.endDate}
@@ -93,7 +91,7 @@ const ExperienceSection = () => {
                                         </div>
 
                                         <div
-                                            className={`overflow-hidden transition-all pb-3 tracking-wide duration-300 ease-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
+                                            className={`overflow-hidden transition-all pb-3 duration-300 ease-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                                             aria-hidden={openIndex !== index}
                                         >
                                             <p className="text-gray-600 leading-relaxed mb-6">
