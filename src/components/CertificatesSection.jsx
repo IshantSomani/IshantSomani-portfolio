@@ -132,7 +132,7 @@ const Certificates = memo(function Certificates() {
 
                         <a
                             href="tel:+919928271130"
-                            className="flex items-center tracking-wide text-green-600 hover:text-green-800 transition-all group font-medium"
+                            className="flex items-center tracking-wide text-indigo-600 hover:text-indigo-800 transition-all group font-medium"
                             aria-label="Call phone number"
                         >
                             <HiOutlinePhone className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
@@ -140,7 +140,7 @@ const Certificates = memo(function Certificates() {
                         </a>
 
                         <a
-                            href="https://www.linkedin.com/in/https://www.linkedin.com/in/ishant-somani-973492217/"
+                            href="https://www.linkedin.com/in/ishant-somani-973492217/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center tracking-wide text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
