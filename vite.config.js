@@ -63,6 +63,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA(manifestForPlugIn),
   ],
+  assetsInclude: ['**/*.lottie'],
   build: {
     minify: 'esbuild', // Use esbuild to minify the code
     target: 'es2015',  // Target modern JavaScript for better tree shaking

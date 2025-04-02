@@ -1,7 +1,7 @@
-import { lazy, Suspense, useCallback, useMemo, useState } from "react";
-import { CircleLoader } from "react-spinners";
+import { lazy, Suspense, useCallback, useState } from "react";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import { works } from "../assets/assets";
+import Loader from "./Loader";
 
 const SkillsSection = lazy(() => import('./SkillsSection'));
 
@@ -11,13 +11,6 @@ const ExperienceSection = () => {
     const toggleDetails = useCallback((index) => {
         setOpenIndex(prev => prev === index ? null : index);
     }, []);
-
-    const loader = useMemo(() => (
-        <div className="flex justify-center items-center h-screen">
-            <CircleLoader color="#000" loading size={50} speedMultiplier={1} />
-            <span className="sr-only">Loading Experience...</span>
-        </div>
-    ), []);
 
     return (
         <>
@@ -104,7 +97,7 @@ const ExperienceSection = () => {
                 </div>
             </section>
 
-            <Suspense fallback={loader}>
+            <Suspense fallback={<Loader />}>
                 <SkillsSection />
             </Suspense>
         </>

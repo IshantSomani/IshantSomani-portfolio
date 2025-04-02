@@ -1,24 +1,17 @@
-import { lazy, Suspense, useMemo } from 'react';
+import { lazy, Suspense } from 'react';
 import { TypingEffect } from '../components/TypingEffect';
-import { CircleLoader } from 'react-spinners';
 import profile from '../assets/profile.png';
+import Loader from '../components/Loader';
 
 const SocialMediaSection = lazy(() => import('../components/SocialMediaSection'));
 
 const Home = () => {
 
-    const loader = useMemo(() => (
-        <div className="flex justify-center items-center h-screen">
-            <CircleLoader color="#000" loading size={50} speedMultiplier={1} />
-            <span className="sr-only">Loading Home...</span>
-        </div>
-    ), []);
-
     return (
-        <div className="font-sans antialiased max-w-4xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8" aria-label="Home Page">
+        <div className="font-sans antialiased max-w-3xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8" aria-label="Home Page">
             <section id='hero' className="mb-container">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
                         {/* Text Content */}
                         <div className="order-2 md:order-1 text-left w-full">
                             <div className="staggered-fade-in">
@@ -26,19 +19,14 @@ const Home = () => {
                                     <TypingEffect text="Hi, I'm Ishant" />
                                 </h1>
 
-                                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 mb-2">
+                                <h3 className="text-xl text-gray-800 mb-2">
                                     Passionate{" "}
-                                    <span className="text-indigo-600 relative">Full Stack Developer</span>
+                                    <span className="bg-gray-200 px-2 relative font-semibold">Full Stack Developer</span>
                                 </h3>
 
-                                <p className="text-lg md:text-xl text-gray-600 leading-relaxed  max-w-2xl mx-auto md:mx-0 tracking-wide">
-                                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-medium">
-                                        Crafting seamless digital experiences
-                                    </span>{" "}
-                                    with modern web technologies. Let&apos;s collaborate to transform your ideas into{" "}
-                                    <span className="relative inline-block">
-                                        <span className="underline decoration-indigo-400 decoration-wavy">scalable solutions</span>
-                                    </span>.
+                                <p className="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto md:mx-0 tracking-wide">
+                                    Crafting seamless digital experiences with modern web technologies. Let&apos;s collaborate to transform your ideas into{" "}
+                                    scalable solutions
                                 </p>
                             </div>
                         </div>
@@ -70,7 +58,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <Suspense fallback={loader}>
+            <Suspense fallback={<Loader />}>
                 <SocialMediaSection />
             </Suspense>
 

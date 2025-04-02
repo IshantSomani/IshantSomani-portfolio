@@ -22,12 +22,11 @@
 
 @layer components {
   .mb-container {
-    margin-bottom: theme("spacing.10");
+    margin-bottom: theme("spacing.7");
   }
-
   .bottom-border {
-    border-bottom-width: theme('borderWidth.4');
-    border-color: rgb(theme('colors.black') / 0.8);
+    border-bottom-width: theme("borderWidth.4");
+    border-color: rgb(theme("colors.black") / 0.8);
     background-color: white;
     border-radius: theme("borderRadius.lg");
   }
@@ -75,14 +74,13 @@ html {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
-    opacity: 1
+    opacity: 1;
   }
 
   50% {
-    opacity: 0.5
+    opacity: 0.5;
   }
 }
 
@@ -123,7 +121,7 @@ html {
   animation-play-state: paused;
 }
 
-.animate-marquee>* {
+.animate-marquee > * {
   display: inline-block;
 }
 

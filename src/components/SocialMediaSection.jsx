@@ -1,8 +1,8 @@
-import { lazy, Suspense, useMemo } from 'react';
+import { lazy, Suspense } from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { MdOutlineFileDownload } from 'react-icons/md';
-import { CircleLoader } from 'react-spinners';
+import Loader from './Loader';
 
 const ExperienceSection = lazy(() => import('./ExperienceSection'));
 
@@ -37,12 +37,6 @@ const socialLinks = [
 ];
 
 const SocialMediaSection = () => {
-    const loader = useMemo(() => (
-        <div className="flex justify-center items-center h-screen">
-            <CircleLoader color="#000" loading size={50} speedMultiplier={1} />
-            <span className="sr-only">Loading Social Media...</span>
-        </div>
-    ), []);
 
     return (
         <>
@@ -75,7 +69,7 @@ const SocialMediaSection = () => {
                 </div>
             </section>
 
-            <Suspense fallback={loader}>
+            <Suspense fallback={<Loader />}>
                 <ExperienceSection />
             </Suspense>
         </>

@@ -1,8 +1,7 @@
-import { certificates } from '../assets/assets'
 import { memo, useMemo } from "react";
-import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 import { FiExternalLink } from "react-icons/fi";
-import { FaLinkedin } from "react-icons/fa";
+import { certificates } from '../assets/assets'
+import Footer from "./Footer";
 
 const Certificates = memo(function Certificates() {
     const duplicatedCertificates = useMemo(() => [...certificates, ...certificates], []);
@@ -19,11 +18,12 @@ const Certificates = memo(function Certificates() {
 
                 <div className="staggered-fade-in overflow-hidden pb-4">
                     <div className="relative">
-                        <div className="animate-marquee flex gap-6 w-max">
+                    <div className="animate-marquee flex gap-8 w-max">
                             {duplicatedCertificates.map((cert, index) => (
                                 <div
                                     key={index}
-                                    className="group relative p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ease-out min-w-[400px] bottom-border"
+                                    className="group relative p-6 bg-white/80 shadow-lg transform transition-all duration-300 ease-out min-w-[400px] bottom-border hover:shadow-xl hover:-translate-y-1"
+                                //    className="group relative bg-white/80 border border-gray-100 rounded-2xl p-6 w-[420px] hover:border-gray-200 hover:bg-white hover:shadow-lg"
                                 >
                                     <div className="flex gap-4">
                                         <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-black overflow-hidden border border-gray-200">
@@ -36,16 +36,16 @@ const Certificates = memo(function Certificates() {
                                         </div>
 
                                         <div className="flex-1 tracking-wide space-y-2">
-                                            <h3 className="text-lg font-semibold text-gray-900 leading-tight">
+                                            <h3 className="text-xl font-semibold text-gray-900 leading-tight">
                                                 {cert.name}
                                             </h3>
                                             <div className="flex justify-between items-start">
-                                                <p className="text-sm text-gray-600 font-medium">
+                                                <p className="text-sm font-medium text-gray-600">
                                                     {cert.issuer}
                                                 </p>
-                                                <span className="text-sm text-gray-500 whitespace-nowrap">
+                                                <p className="text-sm text-gray-400 mt-1">
                                                     {cert.issueDate}
-                                                </span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -56,10 +56,12 @@ const Certificates = memo(function Certificates() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label={`View ${cert.name} certificate`}
-                                            className="inline-flex items-center text-blue-950 hover:text-blue-900 text-sm font-medium transition-colors group"
+                                            className="inline-flex items-center text-blue-950 hover:text-blue-800 text-sm font-medium transition-all group/link"
                                         >
-                                            <span className="group-hover:underline">Verify Credential</span>
-                                            <FiExternalLink className="ml-2 w-4 h-4 flex-shrink-0" />
+                                            <span className="group-hover/link:underline decoration underline-offset-4">
+                                                Verify Credential
+                                            </span>
+                                            <FiExternalLink className="ml-2 w-4 h-4 flex-shrink-0 translate-y-px" />
                                         </a>
                                     </div>
                                 </div>
@@ -73,45 +75,7 @@ const Certificates = memo(function Certificates() {
                 </div>
             </section>
 
-            <footer
-                className='mb-container'
-                aria-label="Direct Contact Options"
-            >
-                <div className='staggered-fade-in max-w-4xl mx-auto'>
-                    <h2>Direct Contact Options</h2>
-
-                    <div className='staggered-fade-in flex justify-center flex-wrap items-center gap-6 sm:gap-8 bg-white border-l-4 border-black p-4 rounded-lg shadow'>
-                        <a
-                            href="mailto:ishantsomani2003@gmail.com"
-                            className="flex items-center tracking-wide text-blue-600 hover:text-blue-800 transition-all group font-medium"
-                            aria-label="Send email"
-                        >
-                            <HiOutlineMail className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
-                            <span className="hover:font-semibold">ishantsomani2003@gmail.com</span>
-                        </a>
-
-                        <a
-                            href="tel:+919928271130"
-                            className="flex items-center tracking-wide text-indigo-600 hover:text-indigo-800 transition-all group font-medium"
-                            aria-label="Call phone number"
-                        >
-                            <HiOutlinePhone className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
-                            <span className="hover:font-semibold">+91 99282 71130</span>
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/ishant-somani-973492217/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center tracking-wide text-[#0077b5] hover:text-[#005f8d] transition-all group font-medium"
-                            aria-label="Visit LinkedIn profile"
-                        >
-                            <FaLinkedin className="mr-2 w-6 h-6 group-hover:scale-110 transition-transform" />
-                            <span className="hover:font-semibold">LinkedIn</span>
-                        </a>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </>
     )
 });

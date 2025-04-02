@@ -1,11 +1,10 @@
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiCss3, DiHtml5, DiJavascript1 } from 'react-icons/di';
-import { SiAndroid, SiDjango, SiExpress, SiFlask, SiFlutter, SiGit, SiGithub, SiMongodb, SiPython, SiRedux, SiTailwindcss, SiVercel } from 'react-icons/si';
-import { CircleLoader } from 'react-spinners';
-import { lazy, Suspense, useMemo } from 'react';
+import { SiAndroid, SiExpress, SiFlask, SiFlutter, SiGit, SiGithub, SiMongodb, SiPython, SiRedux, SiTailwindcss, SiVercel } from 'react-icons/si';
+import { lazy, Suspense } from 'react';
+import Loader from './Loader'
 
 const ProjectsSection = lazy(() => import('./ProjectsSection'));
-
 const skills = [
     { name: 'HTML', icon: <DiHtml5 />, color: 'text-orange-500' },
     { name: 'CSS', icon: <DiCss3 />, color: 'text-blue-500' },
@@ -19,7 +18,6 @@ const skills = [
     { name: 'Flutter', icon: <SiFlutter />, color: 'text-blue-400' },
     { name: 'Android', icon: <SiAndroid />, color: 'text-emerald-500' },
     { name: 'Python', icon: <SiPython />, color: 'text-blue-300' },
-    { name: 'Django', icon: <SiDjango />, color: 'text-green-700' },
     { name: 'Flask', icon: <SiFlask />, color: 'text-gray-300' },
     { name: 'Git', icon: <SiGit />, color: 'text-orange-600' },
     { name: 'GitHub', icon: <SiGithub />, color: 'text-gray-200' },
@@ -27,12 +25,6 @@ const skills = [
 ];
 
 const SkillsSection = () => {
-    const loader = useMemo(() => (
-        <div className="flex justify-center items-center h-screen">
-            <CircleLoader color="#000" loading size={50} speedMultiplier={1} />
-            <span className="sr-only">Loading Skills...</span>
-        </div>
-    ), []);
 
     return (
         <>
@@ -68,7 +60,7 @@ const SkillsSection = () => {
                 </div>
             </section>
 
-            <Suspense fallback={loader}>
+            <Suspense fallback={<Loader />}>
                 <ProjectsSection />
             </Suspense>
         </>
