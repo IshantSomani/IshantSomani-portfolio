@@ -1,48 +1,8 @@
-import nptel from '../assets/nptel.png'
-import redhat from '../assets/redhat.png'
-import grras from '../assets/grras.png'
+import { certificates } from '../assets/assets'
 import { memo, useMemo } from "react";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 import { FiExternalLink } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
-
-const certificates = [
-    {
-        name: 'MERN Stack Certification',
-        issuer: 'GRRAS Solutions',
-        url: 'https://drive.google.com/file/d/1Z0ddK7KpomK4-PufZmZKho9SmVp01WoA/preview',
-        issueDate: 'July 2024',
-        logo: grras,
-    },
-    {
-        name: 'RHCSA',
-        issuer: 'RedHat, Jaipur',
-        url: 'https://rhtapps.redhat.com/verify?certId=240-209-619',
-        issueDate: 'Oct 2024',
-        logo: redhat,
-    },
-    {
-        name: 'Python for Data Science',
-        issuer: 'NPTEL Online',
-        url: 'https://drive.google.com/file/d/1mIeQ7NJ57R22N565RDPMORExbvKIaxRH/preview',
-        issueDate: 'Jan-Feb 2024',
-        logo: nptel,
-    },
-    {
-        name: 'Introduction To Programming In C',
-        issuer: 'NPTEL Online',
-        url: 'https://drive.google.com/file/d/1Aawq9B9mc2RqoD0DSipMU5rFEeIf8dhM/preview',
-        issueDate: 'Jan-Mar 2023',
-        logo: nptel,
-    },
-    {
-        name: 'Data Base Management System',
-        issuer: 'NPTEL Online',
-        url: 'https://drive.google.com/file/d/1mHYbs7mL-CcCONzZsnUFSRksVcG2MVhV/preview',
-        issueDate: 'Aug-Oct 2022',
-        logo: nptel,
-    },
-];
 
 const Certificates = memo(function Certificates() {
     const duplicatedCertificates = useMemo(() => [...certificates, ...certificates], []);

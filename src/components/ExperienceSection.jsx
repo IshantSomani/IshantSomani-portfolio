@@ -1,24 +1,12 @@
 import { lazy, Suspense, useCallback, useMemo, useState } from "react";
-import grras from '../assets/grras.png'
 import { CircleLoader } from "react-spinners";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import { works } from "../assets/assets";
 
 const SkillsSection = lazy(() => import('./SkillsSection'));
 
 const ExperienceSection = () => {
     const [openIndex, setOpenIndex] = useState(null);
-    const works = useMemo(() => [
-        {
-            companyName: 'GRRAS Solution Pvt. Ltd',
-            url: 'https://in.linkedin.com/company/grras-solutions-p-ltd',
-            logo: grras,
-            title: "Trainee",
-            description: 'During my training at Grras Solutions Pvt. Ltd., I enhanced MERN Stack development expertise, through hands-on training in MongoDB, Express.js, React.js, and Node.js to build both front-end and back-end web applications. I gained hands-on experience in developing responsive UIs, integrating RESTful APIs, and managing databases. This opportunity strengthened my problem-solving skills and deepened my passion for full-stack development.',
-            skills: ['React', 'Node.js', 'MongoDB', 'Express', 'REST APIs', 'JWT'],
-            startDate: 'June 2024',
-            endDate: 'July 2024'
-        },
-    ], []);
 
     const toggleDetails = useCallback((index) => {
         setOpenIndex(prev => prev === index ? null : index);

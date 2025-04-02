@@ -1,122 +1,12 @@
 import { lazy, Suspense, useMemo, useState } from 'react';
-
-import gloryImage from '../assets/glory.jpg';
-import techtroveImage from '../assets/techtrove.png';
-import aiVideoScriptGeneratorImage from '../assets/ai_video_script_generator.png';
-import passwordManagerImage from '../assets/password_manager.png';
-import notesAppImage from '../assets/notes_app.png';
-import vesperaAIImage from '../assets/vespera_ai.png';
 import { BiDownload, BiLink } from 'react-icons/bi';
 import { SiGithub } from 'react-icons/si';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { CircleLoader } from 'react-spinners';
+import { projects } from '../assets/assets';
 
 const CertificatesSection = lazy(() => import('./CertificatesSection'));
 
-
-const projects = [
-    {
-        title: "Glory",
-        description: {
-            "overview": "Full-stack E-Commerce platform for women's clothing built with React, Node.js, and MongoDB",
-            "features": [
-                "Product management system",
-                "User authentication & authorization",
-                "Stripe payment integration",
-                "Responsive UI/UX design",
-                "Inventory tracking system"
-            ]
-        },
-        skills: ["React", "Redux", "Tailwind CSS", "Node.js", "MongoDB", "Stripe API"],
-        github: "https://github.com/IshantSomani/E-commerce",
-        demo: "https://glory-three.vercel.app/",
-        image: gloryImage
-    },
-    {
-        title: "TechTrove",
-        description: {
-            "overview": "AI Tool Showcase Platform with React and Node.js",
-            "features": [
-                "Interactive AI tool demonstrations",
-                "User-friendly interface",
-                "Tool categorization system",
-                "Dynamic content loading",
-                "User rating system"
-            ]
-        },
-        skills: ["React", "Redux", "Tailwind CSS", "Node.js", "MongoDB"],
-        github: "https://github.com/IshantSomani/TechTrove",
-        demo: "https://techtrove-six.vercel.app/",
-        image: techtroveImage
-    },
-    {
-        title: "Ai Video Script Generator",
-        description: {
-            "overview": "AI-powered video script creation tool with OCR capabilities",
-            "features": [
-                "OpenAI API integration",
-                "Multi-source input (text, URLs, files)",
-                "OCR for image/PDF processing",
-                "Script version management",
-                "Export capabilities"
-            ]
-        },
-        skills: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Python", "Flask"],
-        github: "https://github.com/IshantSomani/ai_video_script_generator",
-        image: aiVideoScriptGeneratorImage
-    },
-    {
-        title: "Vespera AI",
-        description: {
-            "overview": "AI Story Generation Platform with React frontend and Flask backend",
-            "features": [
-                "Creative story generation",
-                "User input customization",
-                "Story archiving system",
-                "Multi-format export",
-                "Interactive preview"
-            ]
-        },
-        skills: ["React", "Tailwind CSS", "Python", "Flask", "MongoDB"],
-        github: "https://github.com/IshantSomani/Vespera-AI",
-        demo: "https://vespera-ai.vercel.app/",
-        image: vesperaAIImage
-    },
-    {
-        title: "Password Manager",
-        description: {
-            "overview": "Secure MERN Stack Password Management Solution",
-            "features": [
-                "Military-grade encryption",
-                "Cross-platform sync",
-                "Password strength analyzer",
-                "Two-factor authentication",
-                "Secure sharing"
-            ]
-        },
-        skills: ["React", "Redux", "Tailwind CSS", "Node.js", "MongoDB"],
-        github: "https://github.com/IshantSomani/Password-Manager",
-        demo: "https://password-manager-nine-chi.vercel.app/",
-        image: passwordManagerImage
-    },
-    {
-        title: "Notes App",
-        description: {
-            "overview": "Feature-rich Note Taking Application",
-            "features": [
-                "Rich text editing",
-                "Cloud synchronization",
-                "Note categorization",
-                "Search functionality",
-                "Multi-device support"
-            ]
-        },
-        skills: ["React", "Redux", "Tailwind CSS", "Node.js", "MongoDB"],
-        github: "https://github.com/IshantSomani/Notes-App",
-        demo: "https://notes-app-pearl-delta.vercel.app/",
-        image: notesAppImage
-    }
-];
 
 const Projects = () => {
     const [visibleProjects, setVisibleProjects] = useState(2);
@@ -150,13 +40,13 @@ const Projects = () => {
                                 key={project.title}
                                 className="group relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col h-full bottom-border"
                             >
-                                <figure className="relative bg-gradient-to-r from-blue-50 to-purple-50 overflow-hidden h-fit">
+                                <figure className="relative bg-gradient-to-r from-blue-50 to-purple-50 overflow-hidden h-[11rem]">
                                     <div className="relative w-full overflow-hidden pt-[56.25%]">
                                         <img
                                             src={project.image}
                                             alt={`Screenshot of ${project.title} project`}
                                             loading="lazy"
-                                            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="absolute inset-0 object-cover transition-transform duration-500 group-hover:scale-105"
                                             width={640}
                                             height={360}
                                         />
@@ -177,7 +67,7 @@ const Projects = () => {
 
                                     <div className="project-description mb-4 tracking-wide">
                                         <h4 className="font-semibold mb-2">{project.description.overview}</h4>
-                                        <ul className="list-disc pl-5">
+                                        <ul className="list-disc pl-5 overflow-auto h-[8.8rem]">
                                             {project.description.features.map((feature, index) => (
                                                 <li key={index} className="mb-1">{feature}</li>
                                             ))}
@@ -187,7 +77,7 @@ const Projects = () => {
                                         {project.skills.map(skill => (
                                             <span
                                                 key={skill}
-                                                className="px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded tracking-wide"
+                                                className="px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded tracking-wide w"
                                                 aria-label={`Technology used: ${skill}`}
                                             >
                                                 {skill}
