@@ -17,7 +17,7 @@ const contactOptions = [
         label: "Call phone number",
         icon: <HiOutlinePhone className="w-6 h-6 text-purple-600 group-hover:text-purple-700 transition-colors" />,
         text: "+91 99282 71130",
-        bgColor: "bg-blue-100",
+        bgColor: "bg-purple-100",
         iconColor: "text-purple-600"
     },
     {
