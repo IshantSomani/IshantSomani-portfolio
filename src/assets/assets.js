@@ -81,7 +81,7 @@ export const projects = [
         description: {
             "overview": "AI-powered video script creation tool with OCR capabilities",
             "features": [
-                "OpenAI API integration",
+                "Groq API integration",
                 "Multi-source input (text, URLs, files)",
                 "OCR for image/PDF processing",
                 "Script version management",
