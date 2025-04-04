@@ -3,7 +3,7 @@ import redhat from './redhat.png'
 import grras from './grras.png'
 
 import foreverImage from './forever.png';
-import gloryImage from './glory.jpg';
+import gloryImage from './glory.png';
 import techtroveImage from './techtrove.png';
 import aiVideoScriptGeneratorImage from './ai_video_script_generator.png';
 import passwordManagerImage from './password_manager.png';
